@@ -1,0 +1,492 @@
+/*rem and em do not depend on html font-size in media queries!
+Instead, 1rem=1em=16px*/
+
+/**************************************/
+/*BELOW 1344px (Smaller desktops*/
+/**************************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+    grid-template-columns: 1fr; /* Mobilde sütun sayısını bir olarak ayarla */
+    text-align: center; /* Metni merkeze al */
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .hero-description {
+    font-size: 2rem; /* Açıklama font boyutunu küçült */
+    margin-bottom: 10rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-number {
+    text-align: center; /* Sayıları merkezi hizala */
+    margin-bottom: 10px; /* İstediğiniz boşluğa göre ayarlayabilirsiniz */
+  }
+
+  .step-text-box {
+    text-align: center; /* Metin ve resim kutularını merkezi hizala */
+    margin-bottom: 3rem;
+  }
+
+  .step-img-box {
+    margin-bottom: 4rem;
+    text-align: center; /* Metin ve resim kutularını merkezi hizala */
+  }
+
+  .heading-tertiary {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+/**************************************/
+/*BELOW 1200px (LANDSCAPE TABLETS)*/
+/**************************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .hero-description {
+    font-size: 2rem; /* Açıklama font boyutunu küçült */
+    margin-bottom: 10rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    column-gap: 4.8rem;
+  }
+
+  .hero {
+    column-gap: 4.8rem;
+    grid-template-columns: 1fr; /* Mobilde sütun sayısını bir olarak ayarla */
+    text-align: center; /* Metni merkeze al */
+  }
+
+  .main-nav-list {
+    column-gap: 4.8rem;
+  }
+
+  .testimonial-container {
+    padding: 9.6rem 3.2rem;
+  }
+
+  .step-number {
+    text-align: center; /* Sayıları merkezi hizala */
+    margin-bottom: 10px; /* İstediğiniz boşluğa göre ayarlayabilirsiniz */
+  }
+
+  .step-text-box {
+    text-align: center; /* Metin ve resim kutularını merkezi hizala */
+    margin-bottom: 3rem;
+  }
+
+  .step-img-box {
+    margin-bottom: 4rem;
+    text-align: center; /* Metin ve resim kutularını merkezi hizala */
+  }
+
+  .heading-tertiary {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+/**************************************/
+/*BELOW 944px (TABLETS)*/
+/**************************************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .hero-description {
+    font-size: 2rem; /* Açıklama font boyutunu küçült */
+    margin-bottom: 10rem;
+  }
+
+  .hero {
+    padding: 0 8rem;
+    gap: 6.4rem;
+    grid-template-columns: 1fr; /* Mobilde sütun sayısını bir olarak ayarla */
+    text-align: center; /* Metni merkeze al */
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .logos img {
+    height: 1.8rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.6rem;
+    text-align: left;
+  }
+
+  .phone-number {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    color: #fff; /* Numara rengini değiştir (beyaz) */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 1.8rem;
+  }
+
+  .phone-number:hover {
+    color: #cf1515; /* Numara rengi (kırmızı) */
+  }
+
+  .social-media-icons {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6.3rem; /* Ayrı sosyal medya ikonları arasındaki boşluk */
+  }
+
+  .social-media-icons ion-icon {
+    font-size: 2rem; /* Sosyal medya ikonlarının başlangıç boyutu */
+    color: #fff; /* Başlangıç ikon rengi (beyaz) */
+    transition: font-size 0.5s ease, color 0.5s ease;
+    margin-right: 1rem;
+  }
+
+  .social-media-icons ion-icon:hover {
+    font-size: 2.5rem; /* İkon boyutunu büyüt */
+    color: #cf1515; /* İkon rengini değiştir (kırmızı) */
+  }
+
+  .step-number {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .step-text-box {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .step-img-box {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .heading-tertiary {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(1, 1fr); /* Mobilde sadece bir sütun kullan */
+  }
+
+  .logo-col,
+  .address-col,
+  .nav-col {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo-col {
+    margin-right: 0; /* Sağ boşluğu sıfırla */
+  }
+
+  .social-links {
+    flex-direction: row; /* Sosyal linkleri yatay hizala */
+    justify-content: center; /* Sosyal linkleri ortala */
+  }
+
+  .footer-link {
+    font-size: 1.4rem; /* Yazı boyutunu küçült */
+  }
+
+  .footer-heading {
+    margin-bottom: 2rem; /* Başlık ile diğer içerikler arasındaki boşluğu azalt */
+  }
+
+  .address {
+    margin-bottom: 0; /* Adres altındaki boşluğu sıfırla */
+  }
+}
+
+/**************************************/
+/*BELOW 704px (SMALLER TABLETS)*/
+/**************************************/
+
+@media (max-width: 44em) {
+  .grid--footer {
+    grid-template-columns: repeat(1, 1fr); /* Mobilde sadece bir sütun kullan */
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .hero-description {
+    font-size: 2rem; /* Açıklama font boyutunu küçült */
+    margin-bottom: 10rem;
+  }
+
+  .logo-col,
+  .address-col,
+  .nav-col {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo-col {
+    margin-right: 0; /* Sağ boşluğu sıfırla */
+  }
+
+  .social-links {
+    flex-direction: row; /* Sosyal linkleri yatay hizala */
+    justify-content: center; /* Sosyal linkleri ortala */
+  }
+
+  .footer-link {
+    font-size: 1.4rem; /* Yazı boyutunu küçült */
+  }
+
+  .footer-heading {
+    margin-bottom: 2rem; /* Başlık ile diğer içerikler arasındaki boşluğu azalt */
+  }
+
+  .address {
+    margin-bottom: 0; /* Adres altındaki boşluğu sıfırla */
+  }
+}
+
+/**************************************/
+/*BELOW 544px (PHONES)*/
+/**************************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.6rem;
+    text-align: left;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logos {
+    height: 1.2rem;
+    display: flex;
+    max-width: 544px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .step-number {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .step-text-box {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .step-img-box {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .heading-tertiary {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+

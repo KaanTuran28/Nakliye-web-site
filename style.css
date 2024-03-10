@@ -1,0 +1,1296 @@
+/**************************************/
+/*HEADER*/
+/**************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000033;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  transition: background-color 0.3s, height 0.3s;
+}
+
+.logo {
+  max-height: 5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.phone-number {
+  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+  color: #fff; /* Başlangıç numara rengi (beyaz) */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.phone-number:hover {
+  color: #cf1515; /* Numara rengini değiştir (kırmızı) */
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 4rem; /* Ayrı sosyal medya ikonları arasındaki yatay boşluk */
+}
+
+.social-media-icons ion-icon {
+  font-size: 2rem; /* Sosyal medya ikonlarının başlangıç boyutu */
+  color: #fff; /* Başlangıç ikon rengi (beyaz) */
+  transition: font-size 0.5s ease, color 0.5s ease;
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.social-media-icons ion-icon:hover {
+  font-size: 2.8rem; /* İkon boyutunu daha fazla büyüt */
+  color: #cf1515; /* İkon rengini değiştir (kırmızı) */
+}
+
+.phone-number {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.contact-info .phone-number {
+  animation: bounce 2s infinite;
+}
+
+.contact-info:hover .phone-number {
+  animation: none; /* Hover durumunda animasyonu kapat */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/**************************************/
+/*NAVIGATION*/
+/**************************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #b9b9b9;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  display: inline-block;
+  text-decoration: none;
+  color: red;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link.main-cta:link,
+.main-nav-link.main-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.main-cta:hover,
+.main-nav-link.main-cta:active {
+  background-color: #cf711f;
+}
+
+
+/**************************************/
+/*HERO SECTION*/
+/**************************************/
+
+.section-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease; /* Geçiş efekti ekledik */
+
+  /* Arka planı karartma overlay'i */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Siyah renk ve opaklık seviyesi */
+  }
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  z-index: 1; /* Overlay'in üzerinde kalması için */
+}
+
+.heading-primary {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: #8d8b8b; /* Beyaz renk */
+}
+
+.hero-description {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #eeeeee; /* Gri tonu renk */
+}
+
+
+
+/**************************************/
+/*İletişim*/
+/**************************************/
+
+.contact-info {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  justify-content: left;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.contact-text a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-text a:hover {
+  color: #007bff;
+}
+
+/**************************************/
+/*Hakkında*/
+/**************************************/
+
+/* Creative Counter Styles */
+.creative-counter-area {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.creative-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-counter {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.single-counter img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.counter {
+  font-size: 36px;
+  color: #e90000;
+  font-weight: bold;
+  display: block;
+}
+
+/* Hover effect */
+.single-counter:hover img {
+  transform: scale(1.1); /* Resmi yüzde 10 büyüt */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .creative-counter {
+    flex-direction: column;
+  }
+}
+
+/**************************************/
+/*FEATURED IN SECTION*/
+/**************************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+  background-color: #ff5100;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #c2bfbf;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/**************************************/
+/*HOW IT WORKS SECTION*/
+/**************************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #bab9b9;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img {
+  width: 80%;
+  z-index: 10;
+  transform: translate(-50%, -20%);
+  border-radius: 20%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+/**************************************/
+/*MEALS SECTION*/
+/**************************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.75);
+  border-radius: 11px;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(66, 45, 45, 0.06);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-tittle {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/**************************************/
+/*TESTIMONIALS SECTION*/
+/**************************************/
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  padding: 1.6rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%; /* Eklendi: Resimlerin yüksekliklerini kontrol etmek için */
+  object-fit: cover; /* Eklendi: Resmin oranlarını korumak ve kaplamak için */
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/**************************************/
+/*SECTION PRICING*/
+/**************************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sing-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+/**************************************/
+/*FEATURE SECTION*/
+/**************************************/
+
+.container.grid.grid--4-cols {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px; /* Üstten boşluk miktarını ayarlayabilirsiniz */
+}
+
+.feature {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 3rem;
+  border: 1px solid #ddd;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 7rem;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 4.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  background-color: #000000; /* Özelleştirebilirsiniz */
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px; /* Yazılar arasındaki boşluğu ayarlayabilirsiniz */
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.feature-text {
+  font-size: 1.6rem;
+  color: #7f8c8d;
+}
+
+/**************************************/
+/*CTA SECTION*/
+/**************************************/
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* Map */
+/**************************/
+
+.map-container {
+  width: 100%;
+  height: 50vh; /* 100 viewport height */
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+/* Footer Stilleri */
+
+.footer {
+  padding: 10rem 0;
+  border-top: 1px solid #eee;
+  background-color: #000033;
+}
+
+.grid--footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  
+  
+}
+.logo{
+  margin-left: 2rem;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 4.5rem;
+  margin-top: 3rem;
+}
+
+.social-links li {
+  display: flex;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: 5rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.4rem;
+  color: #e90000;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-top: 10px;
+}
+
+.address {
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.nav-col .footer-nav li {
+  padding-top: 4px;
+  line-height: 1.6;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #f10000;
+  text-decoration: underline; /* Yazının üzerine gelince altını çiz */
+}
+
+/**************************/
+/* whatsapp */
+/**************************/
+
+#whatsapp-widget {
+  position: fixed;
+
+  bottom: 20px;
+
+  height: max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  z-index: 99999999;
+
+  visibility: hidden;
+
+  transition: all 2s ease 0s;
+}
+
+#whatsapp-widget.ww-yes {
+  visibility: visible;
+}
+
+#whatsapp-widget.ww-no {
+  visibility: hidden !important;
+}
+
+#whatsapp-widget .ww-icon {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  opacity: 0;
+
+  animation: grow 3s;
+
+  animation-delay: 1s;
+
+  animation-fill-mode: forwards;
+}
+
+#whatsapp-widget .ww-link {
+  opacity: 1;
+
+  display: block;
+
+  bottom: -15px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  width: 60px;
+
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 11px;
+
+  border: 0px;
+
+  max-width: inherit;
+
+  color: rgb(175, 175, 175) !important;
+}
+
+#whatsapp-widget .ww-link:hover {
+  border: 0px;
+
+  text-decoration: underline !important;
+
+  color: rgb(175, 175, 175) !important;
+}
+
+#whatsapp-widget .ww-text {
+  border-radius: 8px;
+
+  border: 1px solid #e2e2e2;
+
+  cursor: pointer;
+
+  word-break: break-word;
+
+  background: white;
+
+  padding: 1rem;
+
+  position: relative;
+
+  box-shadow: 2px 2px 15px 2px rgb(0 0 0 / 17%);
+
+  opacity: 0;
+
+  animation: slide 1s;
+
+  animation-delay: 3s;
+
+  animation-fill-mode: forwards;
+
+  margin-bottom: 15px;
+
+  z-index: 100;
+}
+
+#whatsapp-widget .ww-text:hover {
+  color: red !important;
+}
+
+#whatsapp-widget .ww-arrow {
+  position: absolute;
+
+  background: white;
+
+  border-right: 0.5px solid #e2e2e2;
+
+  border-bottom: 0.5px solid #e2e2e2;
+
+  top: 50%;
+
+  width: 20px;
+
+  height: 20px;
+
+  z-index: -100;
+}
+
+#whatsapp-widget.ww-right .ww-arrow {
+  transform: translateY(-50%) rotate(-45deg);
+
+  right: -11px;
+
+  left: unset;
+}
+
+#whatsapp-widget.ww-left .ww-arrow {
+  left: -11px;
+
+  right: unset;
+
+  transform: translateY(-50%) rotate(135deg);
+}
+
+#whatsapp-widget.ww-big .ww-text {
+  font-size: 20px;
+
+  line-height: 20px;
+}
+
+#whatsapp-widget.ww-medium .ww-text {
+  font-size: 20px;
+
+  line-height: 22px;
+
+  padding: 15px;
+}
+
+#whatsapp-widget.ww-normal .ww-text {
+  font-size: 17px;
+
+  padding: 12px;
+
+  line-height: 19px;
+}
+
+#whatsapp-widget svg {
+  fill: rgb(255, 255, 255);
+
+  z-index: 1;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: transform 0.7s ease-in-out;
+
+  width: 100%;
+
+  height: 100%;
+
+  stroke: none;
+}
+
+#whatsapp-widget svg:hover {
+  transform: rotate(720deg);
+}
+
+#whatsapp-widget.ww-right .ww-text::after {
+  right: -10px;
+
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+#whatsapp-widget.ww-left .ww-text::after {
+  left: -10px;
+
+  transform: translateY(-50%) rotate(135deg);
+}
+
+#whatsapp-widget.ww-left {
+  left: 20px;
+
+  flex-direction: row-reverse;
+}
+
+#whatsapp-widget.ww-right {
+  right: 20px;
+
+  flex-direction: row;
+}
+
+#whatsapp-widget .ww-icon-link {
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  box-shadow: rgb(0 0 0 / 40%) 2px 2px 6px;
+
+  transition: all 0.5s ease 0s;
+
+  position: relative;
+
+  z-index: 200;
+
+  display: block;
+
+  border: 0px;
+
+  background: rgb(77, 194, 71) !important;
+}
+
+#whatsapp-widget.ww-normal .ww-icon-link {
+  width: 50px;
+
+  height: 50px;
+}
+
+#whatsapp-widget.ww-medium .ww-icon-link {
+  height: 65px;
+
+  width: 65px;
+}
+
+#whatsapp-widget.ww-big .ww-icon-link {
+  height: 75px;
+
+  width: 75px;
+}
+
+#whatsapp-widget .ww-icon div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* 768 piksel genişliğinden küçük ekranlar için özel stiller */
+
+  #whatsapp-widget {
+    bottom: 5px;
+  }
+
+  #whatsapp-widget .ww-text {
+    display: none;
+  }
+
+  #whatsapp-widget.ww-right {
+    right: 5px;
+    left: unset;
+  }
+
+  #whatsapp-widget.ww-left {
+    left: 5px;
+    right: unset;
+  }
+
+  #whatsapp-widget.ww-normal .ww-icon-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  #whatsapp-widget.ww-medium .ww-icon-link {
+    height: 50px;
+    width: 50px;
+  }
+
+  #whatsapp-widget.ww-big .ww-icon-link {
+    height: 60px;
+    width: 60px;
+  }
+
+  #whatsapp-widget.ww-medium .ww-text {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px;
+  }
+
+  #whatsapp-widget.ww-big .ww-text {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 12px;
+  }
+}
+
+@keyframes slide {
+  from {
+    bottom: -20px;
+
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0px;
+
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+
+    -moz-transform: scale(0);
+
+    -o-transform: scale(0);
+
+    -ms-transform: scale(0);
+
+    transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+
+    -moz-transform: scale(1.2);
+
+    -o-transform: scale(1.2);
+
+    -ms-transform: scale(1.2);
+
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+
+    -moz-transform: scale(1);
+
+    -o-transform: scale(1);
+
+    -ms-transform: scale(1);
+
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+/* Counter Section Styles */
+.logistic_counter_area {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.single-counter {
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.single-counter img {
+  max-width: 100%;
+  height: auto;
+}
+
+.counter {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #444;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  .single-counter {
+    margin-bottom: 20px;
+  }
+
+  .counter {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+}
+
+/* Animation Styles */
+.logistic_counter_area.in-view .single-counter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.single-counter {
+  animation: fadeInUp 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+
+/**************************************/
+/*Demek burdasın ben Kaan*/
+/**************************************/
